@@ -1,0 +1,76 @@
+.accordionButton:hover {
+  color: #45a88aff;
+  background-color: #45a88aff;
+}
+
+.accordionHeader {
+  background-color: #f4f4f4;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.accordionContent {
+  max-height: 0;
+  overflow: hidden;
+  padding: 0px 0px 0px 30px;
+  transition: max-height 0.3s ease-in-out;
+}
+
+.accordionItem.active .accordionContent {
+  max-height: 200px;
+}
+
+.accordion {
+  background-color: #22252bff;
+}
+
+/* .accordionItem {
+    border-color: #22252bff;
+    border: solid #22252bff;
+    -webkit-box-shadow: -4px 4px 0 -1px rgba(34, 37, 43, 1);
+    box-shadow: -4px 4px 0 -1px rgba(34, 37, 43, 1);
+  } */
+
+.accordionButton {
+  -webkit-box-shadow: -4px 4px 0 -1px rgba(34, 37, 43, 1);
+  box-shadow: -4px 4px 0 -1px rgba(34, 37, 43, 1);
+}
+
+.accordionButton:not(.collapsed) {
+  -webkit-box-shadow: -4px 4px 0 -1px rgba(34, 37, 43, 1);
+  box-shadow: -4px 4px 0 -1px rgba(34, 37, 43, 1);
+}
+
+/* Cambia el color de fondo del acordeón cuando está expandido */
+.accordion-collapse.show {
+  background-color: #22252bff;
+  color: #22252bff;
+}
+
+.accordionItem {
+  background-color: #22252bff;
+}
+
+/* Agrega esta regla de estilo para ocultar el icono de flecha en el botón del acordeón */
+.accordionButton::after {
+  display: none !important;
+}
+
+/* Estilo para el botón "Ver más" */
+.viewMoreButton {
+  background: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 13px;
+  margin: 15px 0 0 60px;
+  padding: 0;
+  display: block;
+}
+
+/* Estilos de las banderas de cada pais */
+
+.imgCountry {
+  width: 15px;
+  margin-right: 10px;
+}

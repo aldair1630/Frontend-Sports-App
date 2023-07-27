@@ -1,0 +1,15 @@
+.menuContainer {
+  list-style: none;
+  font-size: smaller;
+}
+
+.liAndPMenu {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: -20px;
+  align-items: center;
+}
+
+.liMenu {
+  display: flex;
+}

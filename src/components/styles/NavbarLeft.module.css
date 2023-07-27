@@ -1,0 +1,59 @@
+.navbarLeftContainer {
+  display: flex;
+  justify-content: flex-start;
+  background-color: #22252bff;
+  width: 100%;
+  min-height: 100%;
+  justify-content: center;
+  padding: 0px 10px 0px 10px;
+}
+
+.inputNavbarLeft {
+  background-color: #3d414bff;
+  background-position: right center;
+  background-image: url("../../assets/img/magnifying-glass-solid.svg");
+  background-repeat: no-repeat;
+  background-size: 30px 20px;
+  margin-top: 16px;
+  padding: 0px 40px 0px 10px;
+  width: 219px;
+  height: 36px;
+  border: 1px solid #3d414bff;
+}
+
+.campeonatosAndInput {
+  display: flex;
+  flex-direction: column;
+}
+
+.ulNavbarLeft {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  list-style: none;
+  font-size: small;
+  margin: 20px 0px 0px -30px;
+  cursor: pointer;
+}
+
+.liNavbarLeft {
+  margin: 5px 0px 5px 0px;
+}
+
+.liNavbarLeft:hover {
+  color: #45a88aff;
+}
+
+.timeNavbarLeft {
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1240) {
+  .navbarLeftContainer {
+    min-width: 300px;
+  }
+}

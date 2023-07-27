@@ -1,0 +1,24 @@
+.image {
+  /* background-image: url("./dogs.jpg"); */
+  background-size: cover;
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  min-width: max-content;
+  min-height: 100vh;
+  /* background-color: blue; */
+}
+
+.page {
+  line-height: 100vh;
+  text-align: center;
+  font-size: 100px;
+  color: white;
+  background-color: rgba(63, 53, 55, 0.9);
+  border-radius: 5%;
+}
+
+.page:hover {
+  color: rgb(255, 252, 252);
+  /* text-shadow: 1px -1px 5px rgb(0, 0, 0); */
+  box-shadow: 1px -1px 5px rgb(0, 0, 0);
+}
