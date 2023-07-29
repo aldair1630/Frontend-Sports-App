@@ -17,9 +17,7 @@ export const FETCH_DOGS_FAILURE = "FETCH_DOGS_FAILURE";
 export const getMatchsByCountries = () => {
   //Funcion asincronica que hace peticion con axios a la ruta de mi servidor
   return async function (dispatch) {
-    const apiMatchs = await axios.get(
-      "http://localhost:3001/football/countries"
-    ); //Peticion al servidor
+    const apiMatchs = await axios.get("/football/countries"); //Peticion al servidor
     const matchs = apiMatchs.data; //Obtengo los datos del llmado en una variable
     dispatch({ type: GET_MATCHS_BY_COUNTRIES, payload: matchs }); //Despacho de la accion
   };
@@ -28,7 +26,7 @@ export const getMatchsByCountries = () => {
 //Funcion action creator para obtener un juego por el id
 export const getDogById = (idDog) => {
   return async function (dispatch) {
-    const apiDogs = await axios.get(`http://localhost:3001/dogs/${idDog}`);
+    const apiDogs = await axios.get(`/dogs/${idDog}`);
     const dog = apiDogs.data;
     dispatch({ type: GET_DOG_BY_ID, payload: dog });
   };
@@ -37,7 +35,7 @@ export const getDogById = (idDog) => {
 //Funcion action creator para obtener un juego por nombre
 export const getDogByName = (name) => {
   return async function (dispatch) {
-    const apiDogs = await axios.get(`http://localhost:3001/dogs?name=${name}`);
+    const apiDogs = await axios.get(`/dogs?name=${name}`);
     const dog = apiDogs.data;
     dispatch({ type: GET_DOG_BY_NAME, payload: dog });
   };
@@ -48,7 +46,7 @@ export const createDog = () => {};
 
 export const getDogDetails = (idDog) => {
   return async function (dispatch) {
-    const apiDogs = await axios.get(`http://localhost:3001/details/${idDog}`);
+    const apiDogs = await axios.get(`/details/${idDog}`);
     const dog = apiDogs.data;
     dispatch({ type: GET_DOG_DETAILS, payload: dog });
   };
@@ -62,9 +60,7 @@ export const deleteDog = (idDog) => ({
 export const getTemperaments = () => {
   //Funcion asincronica que hace peticion con axios a la ruta de mi servidor
   return async function (dispatch) {
-    const allTemperaments = await axios.get(
-      "http://localhost:3001/temperaments"
-    ); //Peticion al servidor
+    const allTemperaments = await axios.get("/temperaments"); //Peticion al servidor
     const temperaments = allTemperaments.data; //Obtengo los datos del llmado en una variable
     dispatch({ type: GET_TEMPERAMENTS, payload: temperaments }); //Despacho de la accion
   };

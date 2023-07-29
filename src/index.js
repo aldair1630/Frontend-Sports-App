@@ -7,6 +7,7 @@ import store from "./redux/store";
 import App from "./App";
 import "./index.css";
 import { BrowserRouter } from "react-router-dom";
+import axios from "axios";
 
 const domain = process.env.REACT_APP_AUTH0_DOMAIN;
 const clientId = process.env.REACT_APP_AUTH0_CLIENT_ID;
@@ -17,6 +18,9 @@ console.log(
   process.env.REACT_APP_AUTH0_DOMAIN,
   process.env.REACT_APP_AUTH0_CLIENT_ID
 );
+
+axios.defaults.baseURL =
+  "https://backend-sports-app-production.up.railway.app//";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
