@@ -20,7 +20,7 @@ console.log(
 );
 
 axios.defaults.baseURL =
-  "https://backend-sports-app-production.up.railway.app//";
+  "https://backend-sports-app-production.up.railway.app/";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
