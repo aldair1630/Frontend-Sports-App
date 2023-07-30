@@ -13,14 +13,8 @@ const domain = process.env.REACT_APP_AUTH0_DOMAIN;
 const clientId = process.env.REACT_APP_AUTH0_CLIENT_ID;
 
 // const redirectUri = authorizationParams
-
-console.log(
-  process.env.REACT_APP_AUTH0_DOMAIN,
-  process.env.REACT_APP_AUTH0_CLIENT_ID
-);
-
 axios.defaults.baseURL =
-  "https://backend-sports-app-production.up.railway.app//";
+  "https://backend-sports-app-production.up.railway.app/";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 

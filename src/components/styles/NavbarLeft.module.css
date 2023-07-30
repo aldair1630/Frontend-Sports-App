@@ -52,6 +52,19 @@
   cursor: pointer;
 }
 
+.timeItem {
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+.timeItem:hover {
+  color: #ffcd03ff;
+}
+
+.selected {
+  color: #ffcd03ff;
+}
+
 @media screen and (max-width: 1240) {
   .navbarLeftContainer {
     min-width: 300px;

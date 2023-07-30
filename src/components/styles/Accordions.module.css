@@ -49,6 +49,9 @@
 
 .accordionItem {
   background-color: #22252bff;
+  border: var(--bs-accordion-border-width) solid #272a2e;
+  -webkit-box-shadow: -4px 4px 0 -1px rgba(34, 37, 43, 1);
+  box-shadow: -4px 4px 0 -1px rgba(34, 37, 43, 1);
 }
 
 /* Agrega esta regla de estilo para ocultar el icono de flecha en el botón del acordeón */

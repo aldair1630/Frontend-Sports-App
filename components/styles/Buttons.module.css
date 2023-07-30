@@ -1,0 +1,20 @@
+.divAccount {
+  display: flex;
+  align-items: center;
+}
+
+.divRegister {
+  color: #ffcd03ff;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.divForgotten {
+  color: white;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.divForgotten:hover {
+  color: green;
+}

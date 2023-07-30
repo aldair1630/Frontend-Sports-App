@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import style from "./styles/NavbarLeft.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFutbol } from "@fortawesome/free-solid-svg-icons";
@@ -9,6 +9,15 @@ import { faClock } from "@fortawesome/free-solid-svg-icons";
 import Accordions from "./Accordions";
 
 function NavbarLeft() {
+  const [selectedTime, setSelectedTime] = useState("today");
+
+  const handleTimeItemClick = (time) => {
+    if (selectedTime === time) {
+      return;
+    }
+
+    setSelectedTime(time);
+  };
   return (
     <div className={style.navbarLeftContainer}>
       <div className={style.campeonatosAndInput}>
@@ -80,11 +89,46 @@ function NavbarLeft() {
           <p>
             <FontAwesomeIcon icon={faClock} />
           </p>
-          <p>TODAY</p>
-          <p>3H</p>
-          <p>24H</p>
-          <p>72H</p>
-          <p>ALL</p>
+          <p
+            className={`${style.timeItem} ${
+              selectedTime === "today" ? style.selected : ""
+            }`}
+            onClick={() => handleTimeItemClick("today")}
+          >
+            TODAY
+          </p>
+          <p
+            className={`${style.timeItem} ${
+              selectedTime === "3H" ? style.selected : ""
+            }`}
+            onClick={() => handleTimeItemClick("3H")}
+          >
+            3H
+          </p>
+          <p
+            className={`${style.timeItem} ${
+              selectedTime === "24H" ? style.selected : ""
+            }`}
+            onClick={() => handleTimeItemClick("24H")}
+          >
+            24H
+          </p>
+          <p
+            className={`${style.timeItem} ${
+              selectedTime === "72H" ? style.selected : ""
+            }`}
+            onClick={() => handleTimeItemClick("72H")}
+          >
+            72H
+          </p>
+          <p
+            className={`${style.timeItem} ${
+              selectedTime === "all" ? style.selected : ""
+            }`}
+            onClick={() => handleTimeItemClick("all")}
+          >
+            ALL
+          </p>
         </div>
 
         {/* START ACORDION */}

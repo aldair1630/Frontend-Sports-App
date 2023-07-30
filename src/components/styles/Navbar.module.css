@@ -7,6 +7,13 @@
   justify-content: center;
 }
 
+/* ESTILOS DEL LOGO */
+.logoNavbar {
+  width: 150px;
+  height: 150px;
+  margin-top: 15px;
+}
+
 .divUlNavbar {
   display: flex;
   align-items: center;

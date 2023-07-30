@@ -1,40 +1,34 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import style from "./styles/Menu.module.css";
 
 function Menu() {
+  const [currentTime, setCurrentTime] = useState(new Date());
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentTime(new Date());
+    }, 1000); // Actualizar la hora cada segundo
+
+    return () => {
+      clearInterval(interval); // Limpia el intervalo cuando el componente se desmonta
+    };
+  }, []);
+
   return (
     <div className={style.menuContainer}>
       <div className={style.liAndPMenu}>
-        <div className={style.liMenu}>
-          <p style={{ color: "grey" }}> Datetime teams</p>
+        <div className={style.divLiMenu}>
+          <p style={{ color: "grey" }}> {currentTime.toLocaleString()}</p>
           <p style={{ paddingLeft: "15px" }}>|</p>
-          <li style={{ padding: "0px 10px 0px 15px", color: "aliceblue" }}>
-            Help
-          </li>
-          <li style={{ padding: "0px 10px 0px 10px", color: "aliceblue" }}>
-            Status
-          </li>
-          <li style={{ padding: "0px 10px 0px 10px", color: "aliceblue" }}>
-            Live Score
-          </li>
-          <li style={{ padding: "0px 10px 0px 10px", color: "aliceblue" }}>
-            Coupon Check
-          </li>
-          <li style={{ padding: "0px 10px 0px 10px", color: "aliceblue" }}>
-            Old Desktop
-          </li>
+          <li className={style.liMenu}>Help</li>
+          <li className={style.liMenu}>Status</li>
+          <li className={style.liMenu}>Live Score</li>
+          <li className={style.liMenu}>Coupon Check</li>
+          <li className={style.liMenu}>Old Desktop</li>
         </div>
         <div style={{ display: "flex" }}>
           <p>|</p>
-          <p
-            style={{
-              marginRight: "20px",
-              marginLeft: "10px",
-              color: "aliceblue",
-            }}
-          >
-            Show Match ID
-          </p>
+          <p className={style.pMatchId}>Show Match ID</p>
         </div>
       </div>
       <hr style={{ color: "white", width: "100%" }} />

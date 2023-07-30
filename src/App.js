@@ -2,6 +2,7 @@ import { Routes, Route, useLocation } from "react-router-dom";
 import { Home } from "./views";
 import Navbar from "./components/Navbar";
 import "./App.css";
+import Footer from "./components/Footer";
 
 function App() {
   const location = useLocation();
@@ -11,7 +12,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
       </Routes>
-      {/* {location.pathname !== "/" && <Footer />} */}
+      {location.pathname && <Footer />}
     </div>
   );
 }

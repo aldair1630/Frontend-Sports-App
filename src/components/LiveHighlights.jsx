@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import style from "./styles/Highlights.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFutbol } from "@fortawesome/free-solid-svg-icons";
@@ -7,45 +7,96 @@ import { faBasketball } from "@fortawesome/free-solid-svg-icons";
 import { faBaseball } from "@fortawesome/free-solid-svg-icons";
 import { faVolleyball } from "@fortawesome/free-solid-svg-icons";
 import dartImg from "../assets/img/dart.svg";
+import stadiumImg from "../assets/img/footballstadium.png";
 
 function LiveHighlights() {
+  const [selectedSport, setSelectedSport] = useState("futbol");
+
+  const handleSportItemClick = (sport) => {
+    if (selectedSport === sport) {
+      return;
+    }
+
+    setSelectedSport(sport);
+  };
   return (
-    <div className={style.divHighlights}>
+    <div className={style.divHighlights} style={{ marginBottom: "20px" }}>
       <div className={style.headHighlightContainer}>
         <p style={{ marginLeft: "20px" }}>Live Highlights</p>
         <p style={{ marginRight: "20px" }}>View Live Betting</p>
       </div>
+      {/* ICONOS DEL LIVE HIGHLIGHT */}
       <div className={style.headerHighlightContainer}>
-        <div className={style.highlightsIcons}>
+        <div
+          className={`${style.highlightsIcons} ${
+            selectedSport === "futbol" ? style.selected : ""
+          }`}
+          onClick={() => handleSportItemClick("futbol")}
+        >
           <FontAwesomeIcon icon={faFutbol} />
           <p className={style.pHighlightsIcons}>Futbol</p>
         </div>
 
-        <div className={style.highlightsIcons}>
+        <div
+          className={`${style.highlightsIcons} ${
+            selectedSport === "tenis" ? style.selected : ""
+          }`}
+          onClick={() => handleSportItemClick("tenis")}
+        >
           <FontAwesomeIcon icon={faTableTennisPaddleBall} />
           <p className={style.pHighlightsIcons}>Tenis</p>
         </div>
-        <div className={style.highlightsIcons}>
+        <div
+          className={`${style.highlightsIcons} ${
+            selectedSport === "basketball" ? style.selected : ""
+          }`}
+          onClick={() => handleSportItemClick("basketball")}
+        >
           <FontAwesomeIcon icon={faBasketball} />
           <p className={style.pHighlightsIcons}>Basketball</p>
         </div>
-        <div className={style.highlightsIcons}>
+        <div
+          className={`${style.highlightsIcons} ${
+            selectedSport === "volleyball" ? style.selected : ""
+          }`}
+          onClick={() => handleSportItemClick("volleyball")}
+        >
           <FontAwesomeIcon icon={faVolleyball} />
           <p className={style.pHighlightsIcons}>Volleyball</p>
         </div>
-        <div className={style.highlightsIcons}>
+        <div
+          className={`${style.highlightsIcons} ${
+            selectedSport === "baseball" ? style.selected : ""
+          }`}
+          onClick={() => handleSportItemClick("baseball")}
+        >
           <FontAwesomeIcon icon={faBaseball} />
           <p className={style.pHighlightsIcons}>Baseball</p>
         </div>
-        <div className={style.highlightsIcons}>
+        <div
+          className={`${style.highlightsIcons} ${
+            selectedSport === "handball" ? style.selected : ""
+          }`}
+          onClick={() => handleSportItemClick("handball")}
+        >
           <FontAwesomeIcon icon={faFutbol} />
           <p className={style.pHighlightsIcons}>Handball</p>
         </div>
-        <div className={style.highlightsIcons}>
+        <div
+          className={`${style.highlightsIcons} ${
+            selectedSport === "darts" ? style.selected : ""
+          }`}
+          onClick={() => handleSportItemClick("darts")}
+        >
           <img src={dartImg} alt={dartImg} style={{ width: "20px" }} />
           <p className={style.pHighlightsIcons}>Darts</p>
         </div>
-        <div className={style.highlightsIcons}>
+        <div
+          className={`${style.highlightsIcons} ${
+            selectedSport === "table-tenis" ? style.selected : ""
+          }`}
+          onClick={() => handleSportItemClick("table-tenis")}
+        >
           <FontAwesomeIcon icon={faTableTennisPaddleBall} />
           <p className={style.pHighlightsIcons}>Table Tenis</p>
         </div>
@@ -93,7 +144,10 @@ function LiveHighlights() {
 
       {/* DATOS DE LOS PARTIDOS */}
       <div className={style.infoHighlights}>
-        <p className={style.pTimeHighLights} style={{ marginLeft: "28px" }}>
+        <p
+          className={style.pTimeHighLights}
+          style={{ marginLeft: "28px", color: "#ffcd03ff" }}
+        >
           20'
         </p>
         <div className={style.infoHighlightsColumn}>
@@ -103,16 +157,18 @@ function LiveHighlights() {
           <p className={style.pTeamHighLights}>Brazil</p>
         </div>
         <p>
-          <FontAwesomeIcon icon={faTableTennisPaddleBall} />
+          <img src={stadiumImg} alt={stadiumImg} style={{ width: "20px" }} />
         </p>
         <div className={style.infoHighlightsColumn}>
           <p
             className={style.pScoreHighLigths}
-            style={{ marginBottom: "-4px" }}
+            style={{ marginBottom: "-4px", color: "#ffcd03ff" }}
           >
             1
           </p>
-          <p className={style.pScoreHighLigths}>2</p>
+          <p className={style.pScoreHighLigths} style={{ color: "#ffcd03ff" }}>
+            2
+          </p>
         </div>
         <p>
           <button className={style.firstBtnInfoHighLights}>1</button>

@@ -1,0 +1,121 @@
+.divHighlights {
+  background-color: #22252b;
+  color: white;
+  min-height: 200px;
+}
+
+.headHighlightContainer {
+  display: flex;
+  justify-content: space-between;
+  height: 32px;
+  background-color: #424653;
+}
+
+.headerHighlightContainer {
+  padding-top: 10px;
+  display: flex;
+  justify-content: space-around;
+  height: 59px;
+  background-color: #363944ff;
+  font-size: 20px;
+}
+
+.highlightsIcons {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.pHighlightsIcons {
+  font-size: 10px;
+}
+
+/* CLASE SELECCIONADORA AL DAR CLICK */
+.selected {
+  color: #45a88aff;
+}
+
+.divDescriptionHighlights {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 20px 0 20px;
+  font-size: small;
+}
+
+.divDescriptionCombHighlights {
+  display: flex;
+  justify-content: flex-end;
+  margin: 0 34px 0 0;
+  font-size: small;
+}
+
+.pDescriptionHighlights {
+  color: white;
+}
+
+.hrHighlights {
+  margin-top: -10px;
+}
+
+.infoHighlights {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.infoHighlightsColumn {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+}
+
+.firstBtnInfoHighLights {
+  color: white;
+  background-color: green;
+  width: 50px;
+  height: 35px;
+  margin: 0 1px;
+  border-style: none;
+  border-radius: 5px 0 0 5px;
+  -webkit-border-radius: 5px 0 0 5px;
+  -moz-border-radius: 5px 0 0 5px;
+  -ms-border-radius: 5px 0 0 5px;
+  -o-border-radius: 5px 0 0 5px;
+}
+
+.secondBtnInfoHighLights {
+  color: white;
+  background-color: green;
+  width: 50px;
+  height: 35px;
+  margin: 0 1px;
+  border-style: none;
+}
+
+.thirdBtnInfoHighLights {
+  color: white;
+  background-color: green;
+  width: 50px;
+  height: 35px;
+  margin: 0 1px;
+  border-style: none;
+  border-radius: 0 5px 5px 0;
+  -webkit-border-radius: 0 5px 5px 0;
+  -moz-border-radius: 0 5px 5px 0;
+  -ms-border-radius: 0 5px 5px 0;
+  -o-border-radius: 0 5px 5px 0;
+}
+
+.pTimeHighLights {
+  font-size: small;
+}
+
+.pTeamHighLights {
+  font-size: small;
+}
+
+.pScoreHighLigths {
+  font-size: small;
+}

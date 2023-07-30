@@ -1,0 +1,36 @@
+.menuContainer {
+  list-style: none;
+  font-size: smaller;
+}
+
+.liAndPMenu {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: -20px;
+  align-items: center;
+}
+
+.divLiMenu {
+  display: flex;
+}
+
+.liMenu {
+  padding: 0px 10px 0px 15px;
+  color: rgb(185, 185, 185);
+  cursor: pointer;
+}
+
+.liMenu:hover {
+  color: white;
+}
+
+.pMatchId {
+  margin-right: 20px;
+  margin-left: 10px;
+  color: rgb(185, 185, 185);
+  cursor: pointer;
+}
+
+.pMatchId:hover {
+  color: white;
+}

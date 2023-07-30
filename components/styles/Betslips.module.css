@@ -1,0 +1,15 @@
+.containerBetslips {
+  background-color: #22252b;
+  color: white;
+  width: 319px;
+  height: 340px;
+}
+
+.headerBetslipsContainer {
+  height: 40px;
+  background-color: #3d414b;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

@@ -4,10 +4,11 @@ import Profile from "./Profile";
 import LogoutButton from "./LogoutButton";
 import { useAuth0 } from "@auth0/auth0-react";
 import Buttons from "./Buttons";
+import logo from "../assets/images/bobobet.png";
 
 function Navbar() {
   const { isAuthenticated } = useAuth0();
-  const [selectedColor, setSelectedColor] = useState(null);
+  const [selectedColor, setSelectedColor] = useState("sports");
 
   const handleItemClick = (color) => {
     // Si el elemento ya está coloreado con el color seleccionado, no hacemos nada al hacer clic
@@ -21,9 +22,7 @@ function Navbar() {
   return (
     <div className={style.navbarContainer}>
       <a href="/" alt="logo">
-        <h1 className={style.h1Navbar} style={{ color: "white" }}>
-          LOGO
-        </h1>
+        <img src={logo} alt="" className={style.logoNavbar} />
       </a>
       <div className={style.divUlNavbar}>
         <ul className={style.ulNavbar}>
